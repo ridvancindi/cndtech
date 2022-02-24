@@ -17,12 +17,12 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
-        <link href="{% static 'css/main.css' %}" rel="stylesheet">
-        
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    
+
     <title>Website Menu #4</title>
 </head>
 
@@ -68,11 +68,13 @@
                                         {% for post in allpost %}
                                         {% if forloop.first %}
                                         <div class="carousel-item active">
-                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}" class="d-block w-100" alt="..."></a>
+                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}"
+                                                    class="d-block w-100" alt="..."></a>
                                         </div>
                                         {% else %}
                                         <div class="carousel-item">
-                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}" class="d-block w-100" alt="..."></a>
+                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}"
+                                                    class="d-block w-100" alt="..."></a>
                                         </div>
                                         {% endif %}
                                         {% endfor %}
@@ -92,7 +94,16 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <img class="w-100 pt-2" src="{% static 'images/adss.jpg' %}" alt="">
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- XYZ 336 x 280 -->
+                                <ins class="adsbygoogle"
+                                style="display:inline-block;width:728px;height:90px"
+                                data-ad-client="ca-pub-4315903975362102"
+                                data-adtest="on"
+                                data-ad-slot="7308821836"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
                             </div>
                         </div>
                         <div class="col-md-3 pt-05 ps-md-05">
