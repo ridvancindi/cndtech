@@ -1,0 +1,142 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="{{article.meta_tag}}">
+  <meta name="description" content="{{article.summary}}">
+  <meta property="og:site_name" content="">
+  <meta property="og:title" content="{{article.title}}">
+  <meta property="og:description" content="{{article.summary}}">
+  <meta property="og:image" content="/{{article.cont_img}}">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="article">
+  <link href="{% static 'images/logo.png' %}" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  <title>Website Menu #4</title>
+</head>
+
+<body class="bg-gray">
+  <!-- ======= Header ======= -->
+  <header id="header">
+    {% include "includes/navbar.html" %}
+  </header>
+
+  <main id="main">
+    <section id="blog" class="blog">
+      <div id="fixed-rklm" style="position: relative;  width: 100%; top: 100px;">
+        <div style="position: absolute;" class="top-left">
+            <img src="{% static 'images/11906808274438146723.png' %}" alt="">
+        </div>
+    </div>
+    <div id="fixed-rklm" style="position: relative; left: 20px;  width: 100%; top: 100px;">
+        <div style="position: absolute; right: 20px;" class="top-left">
+            <img src="{% static 'images/11906808274438146723.png' %}" alt="">
+        </div>
+    </div>
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div style="text-align: center;" class="top-center mb-5">
+            <img src="{% static 'images/5456478904433034501.png' %}" alt="">
+        </div>
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img text-center">
+                <img src="/{{article.cont_img}}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">{{article.title}}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="uil uil-user"></i> <a
+                      href="blog-single.html">{{article.auth}}</a></li>
+                  <li class="d-flex align-items-center"><i class="uil uil-clock"></i> <a href="blog-single.html"><time
+                        datetime="2020-01-01">{{article.created_date}}</time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+                {{article.content|safe}}
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  <li><a href="#">{{article.category}}</a></li>
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  {% for tagss in metatag %}
+                  <li><a>{{tagss|safe}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </article>
+          </div>
+          {% include "includes/sidebar.html" %}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".menu-icon").on("click", function () {
+        $("nav .navbar-collapse").toggleClass("display-block");
+      });
+    });
+
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('shadow');
+      }
+
+      else {
+        $('nav').removeClass('shadow');
+      }
+    });</script>
+  <script>
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("fixed-rklm");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("rklm-fixed");
+        } else {
+            header.classList.remove("rklm-fixed");
+        }
+    }
+</script>
+<script>
+  $(document).ready(function () {
+      $(".navbar-toggler").on("click", function () {
+          $("nav .navbar-collapse").toggleClass("show");
+          $("nav .navbar-collapse").arial("show");
+          $("nav .navbar-toggler").toggleClass("collapsed");
+      });
+  });
+</script>
+</body>
+
+</html>

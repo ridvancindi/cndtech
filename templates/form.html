@@ -1,0 +1,22 @@
+{% extends "leyaut.html" %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+    <div class="" style="margin-top:100px;">
+    <div class="col-md-6 offset-md-3">
+        <h3>Kontrol Paneli/<small>Güncellem</small></h3>
+        <hr>
+        <form method = "post">
+            {% csrf_token %}
+            {{form.media}}
+            
+           {{form|crispy}}
+            <br>
+            <button type = "submit" class = "btn btn-success">Güncelle</button>
+        </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock body %}
