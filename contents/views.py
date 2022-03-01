@@ -44,13 +44,16 @@ def index(request):
     category = Category.objects.all()
     tags = Tag.objects.all()
     all = []
+    trans = translate(language='fr')
     for person in Maincontent.objects.order_by('?')[0:6]:
         all.append(person)
     context = {
         "models":models,
+        'trans': trans,
         'category' :category,
         'allpost':all,
         'tags':tags,
+        
     } 
     return render(request,"index.html",context)
 def categorypage(request,cat):  

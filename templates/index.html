@@ -8,22 +8,19 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="">
-    <meta property="og:title" content="">
-    <meta property="og:url" content="">
-    <link href="{% static 'images/logo.png' %}" rel="icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <!-- CSS only -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <meta property="og:site_name" content="cnd-tech">
+    <meta property="og:title" content="cndtech">
+    <meta property="og:url" content="cnd-tech.com">
+    <link href="{% static 'images/webimg/icon.png' %}" rel="icon">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4315903975362102"
+     crossorigin="anonymous"></script>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
 
-    <title>Website Menu #4</title>
+    <title>CND Tech</title>
 </head>
 
 <body class="bg-gray">
@@ -33,15 +30,12 @@
         </header>
 
         <div style="margin-top: 5em;">
-
-            <section>
+            <div style="text-align: center;" class="top-center mb-5">
+                <img src="{% static 'images/5456478904433034501.png' %}" alt="">
+            </div>
+            <section style="height: 600;">
                 <div class="container p-2">
-
                     <div class="row">
-                        <div style="text-align: center;" class="top-center mb-5">
-                            <img src="{% static 'images/5456478904433034501.png' %}" alt="">
-                        </div>
-
                         <!-- <div class="col-md-3">
                             <div class="col-md-12 mb-3">
                                 <img src="/{{twopost.0.cont_img}}" class="d-block w-75" alt="...">
@@ -60,21 +54,33 @@
 
                         </div>
                         <div class="col-lg-7">
-                            <div class="col-12 p-lg-3">
+                            <div style="height: 500px;" class="col-12 pl-lg-3 slider-sec">
                                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-
                                     <div class="carousel-inner">
-
                                         {% for post in allpost %}
                                         {% if forloop.first %}
-                                        <div class="carousel-item active">
-                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}"
-                                                    class="d-block w-100" alt="..."></a>
+                                        <div class="carousel-item active" href="detail/{{post.url}}">
+                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}" class="d-block"
+                                                    style="width: 100%; max-height: 450px; height: 100%;">
+                                                <div class="top-img-title">
+                                                    <div style="font-size: 16px;">
+                                                        {{post.category}}
+                                                    </div>
+                                                    {{post.title}}
+                                                </div>
+                                            </a>
                                         </div>
                                         {% else %}
-                                        <div class="carousel-item">
-                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}"
-                                                    class="d-block w-100" alt="..."></a>
+                                        <div class="carousel-item" href="detail/{{post.url}}">
+                                            <a href="detail/{{post.url}}"><img src="/{{post.cont_img}}" class="d-block"
+                                                    style="width: 100%; max-height: 450px; height: 100%;">
+                                                <div class="top-img-title">
+                                                    <div style="font-size: 16px;">
+                                                        {{post.category}}
+                                                    </div>
+                                                    {{post.title}}
+                                                </div>
+                                            </a>
                                         </div>
                                         {% endif %}
                                         {% endfor %}
@@ -94,16 +100,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                <!-- XYZ 336 x 280 -->
-                                <ins class="adsbygoogle"
-                                style="display:inline-block;width:728px;height:90px"
-                                data-ad-client="ca-pub-4315903975362102"
-                                data-adtest="on"
-                                data-ad-slot="7308821836"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
+                                <img class="w-100 pt-2" src="{% static 'images/adss.jpg' %}" alt="">
                             </div>
                         </div>
                         <div class="col-md-3 pt-05 ps-md-05">
@@ -149,7 +146,10 @@
                                         <p class="post-tag">{{model.category}}</p>
                                         <h4><a href="detail/{{model.url}}" class="post-headline">{{model.title}}</a>
                                         </h4>
-                                        <p>{{model.summary}}</p>
+                                        <p style="font-size: 14px;">{{model.summary}}</p>
+                                        <div style="font-size: 13px;" class="btn bg-blue text-white mb-2">Devamını Oku
+                                            <i class="uil uil-angle-double-right"></i>
+                                        </div>
                                         <div class="post-meta">
                                             <p>By <a href="#">{{model.auth}}</a></p>
                                             <p>{{model.created_date}}</p>

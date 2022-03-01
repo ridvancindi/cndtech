@@ -29,5 +29,4 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns (
     path('',include('contents.urls')),
-    path('<cat>',views.categorypage,name='asd')
  )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   

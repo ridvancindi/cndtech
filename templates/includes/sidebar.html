@@ -8,17 +8,17 @@
         <div class="sidebar-widget latest-post card border-0 p-4 mb-3 rounded">
             <div class="text-secondary">
                 <p style="font-size: 1.3em;"><strong class="me-2">ÖNE ÇIKANLAR</strong><i
-                        style="font-size: 1.2em;" class="text-danger uil uil-arrow-growth"></i>
+                        style="font-size: 1.2em;" class="text-blue uil uil-arrow-growth"></i>
                 </p>
             </div>
             {% for post_model in allpost %}
-            <a style="position: relative;" href="" class="deneme text-dark">
+            <a style="position: relative;" href="detail/{{post_model.url}}" class="text-dark">
                 <div class="row border-bottom mt-2">
                     <div class="col-3 p-1">
                         <img class="w-100 mb-2" src="/{{post_model.cont_img}}" alt="">
                     </div>
                     <div style="z-index: 1;" class="col-9 p-1">
-                        <p class="mb-1" style="font-size: 0.9em;">
+                        <p class="mb-1 sid-title" style="font-size: 0.9em;">
                             <strong>{{post_model.title}}</strong>
                         </p>
                         <p class="text-secondary mb-0" style="font-size: 0.6em;"><strong
@@ -44,7 +44,7 @@
             <div class="sidebar-widget category ">
                 <div class="text-secondary">
                     <p style="font-size: 1.3em;"><strong class="me-2">Kategoriler</strong><i
-                            style="font-size: 1.2em;" class="text-danger uil uil-apps"></i>
+                            style="font-size: 1.2em;" class="text-blue uil uil-apps"></i>
                     </p>
                 </div>
                 <ul class="list-unstyled">
@@ -60,7 +60,7 @@
             <div class="sidebar-widget tags ">
                 <div class="text-secondary">
                     <p style="font-size: 1.3em;"><strong class="me-2">Etiketler</strong><i
-                            style="font-size: 1.2em;" class="text-danger uil uil-tag"></i>
+                            style="font-size: 1.2em;" class="text-blue uil uil-tag"></i>
                     </p>
                 </div>
                 {% for tag in tags %}
