@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <div class="col-lg-4">
 
     <div class="sidebar">
@@ -7,12 +8,12 @@
         </div>
         <div class="sidebar-widget latest-post card border-0 p-4 mb-3 rounded">
             <div class="text-secondary">
-                <p style="font-size: 1.3em;"><strong class="me-2">ÖNE ÇIKANLAR</strong><i
+                <p style="font-size: 1.3em;"><strong class="me-2">{% translate 'ÖNE ÇIKANLAR' %}</strong><i
                         style="font-size: 1.2em;" class="text-blue uil uil-arrow-growth"></i>
                 </p>
             </div>
             {% for post_model in allpost %}
-            <a style="position: relative;" href="detail/{{post_model.url}}" class="text-dark">
+            <a style="position: relative;" href="/detail/{{post_model.url}}" class="text-dark">
                 <div class="row border-bottom mt-2">
                     <div class="col-3 p-1">
                         <img class="w-100 mb-2" src="/{{post_model.cont_img}}" alt="">
@@ -43,14 +44,14 @@
         <div class="card border-0 p-4 mb-3 rounded">
             <div class="sidebar-widget category ">
                 <div class="text-secondary">
-                    <p style="font-size: 1.3em;"><strong class="me-2">Kategoriler</strong><i
+                    <p style="font-size: 1.3em;"><strong class="me-2">{% translate 'Kategoriler' %}</strong><i
                             style="font-size: 1.2em;" class="text-blue uil uil-apps"></i>
                     </p>
                 </div>
                 <ul class="list-unstyled">
                     {% for categorys in category %}
                     <li class="align-items-center">
-                        <a href="{{categorys}}">{{categorys}}</a>
+                        <a href="/{{categorys}}">{{categorys}}</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -59,7 +60,7 @@
         <div class="card border-0 p-4 mb-3 rounded">
             <div class="sidebar-widget tags ">
                 <div class="text-secondary">
-                    <p style="font-size: 1.3em;"><strong class="me-2">Etiketler</strong><i
+                    <p style="font-size: 1.3em;"><strong class="me-2">{% translate 'Etiketler' %}</strong><i
                             style="font-size: 1.2em;" class="text-blue uil uil-tag"></i>
                     </p>
                 </div>

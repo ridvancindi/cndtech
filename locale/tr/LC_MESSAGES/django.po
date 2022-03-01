@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-16 17:42+0300\n"
+"POT-Creation-Date: 2022-03-01 15:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\agenda\settings.py:132
+#: .\agenda\settings.py:136
 msgid "VietNam"
 msgstr ""
 
-#: .\agenda\settings.py:133
+#: .\agenda\settings.py:137
 msgid "English"
 msgstr ""
 
-#: .\agenda\settings.py:134
+#: .\agenda\settings.py:138
 msgid "Turkis"
 msgstr ""
 
-#: .\agenda\settings.py:135
+#: .\agenda\settings.py:139
 msgid "azerbaycan"
 msgstr ""
 
-#: .\contents\views.py:23 .\contents\views.py:30 .\templates\home.html:11
-#: .\templates\home.html:50
+#: .\contents\views.py:75
 msgid "hello"
 msgstr ""
 
-#: .\templates\index.html:90
-msgid "Kelime Havuzu'na hoş geldiniz!"
-msgstr "Kelime Havuzu'na hoş geldiniz!"
+#: .\templates\includes\navbar.html:45 .\templates\includes\sidebar.html:47
+msgid "Kategoriler"
+msgstr "Kategoriler"
 
-#: .\templates\index.html:91
-msgid "Herkesin katkıda bulunabildiği özgür ansiklopedi"
-msgstr "Herkesin katkıda bulunabildiği özgür ansiklopedi"
+#: .\templates\includes\sidebar.html:11
+msgid "ÖNE ÇIKANLAR"
+msgstr "ÖNE ÇIKANLAR"
+
+#: .\templates\includes\sidebar.html:63
+msgid "Etiketler"
+msgstr "Etiketler"
+
+#: .\templates\index.html:127
+msgid "Makaleler"
+msgstr "Makaleler"

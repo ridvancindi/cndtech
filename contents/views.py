@@ -13,7 +13,7 @@ def eskiindex(request):
     post = []
     for person in Maincontent.objects.order_by('?')[0:4]:
         post.append(person)
-    trans = translate(language='fr')
+    trans = translate(language='tr')
     context = {
         "models":models,
         'trans': trans,
@@ -44,12 +44,10 @@ def index(request):
     category = Category.objects.all()
     tags = Tag.objects.all()
     all = []
-    trans = translate(language='fr')
     for person in Maincontent.objects.order_by('?')[0:6]:
         all.append(person)
     context = {
         "models":models,
-        'trans': trans,
         'category' :category,
         'allpost':all,
         'tags':tags,
